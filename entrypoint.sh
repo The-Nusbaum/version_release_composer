@@ -39,6 +39,7 @@ function set_release_notes {
 
 function create_git_tag_and_release {
   # POST a release to repo via Github API
+  echo "TK -" $TOKEN
   curl -s -X POST https://api.github.com/repos/$REPO_OWNER/$repo/releases \
   -H "Authorization: token $TOKEN" \
   -d @- << EOF
