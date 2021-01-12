@@ -28,8 +28,10 @@ else
     fi
   done
   if [[ $specs = 0 ]]; then
+    echo "No spec files found."
     exit 1
   else
+    echo "Spec files found"
     exit 0
   fi
 fi
