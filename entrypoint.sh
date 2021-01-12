@@ -41,16 +41,20 @@ get_files
 
 echo $files
 
-# if [ -z "$files" ];
-# then
-#   echo "Nothing to tag!";
-#   exit $?
-# else
-#   echo "Version File has been updated, proceeding to tag"
-#   prepare_file_info
-#   prepare_github_info
-#   set_release_notes
-#   create_git_tag_and_release
+if [ -z "$files" ];
+then
+  echo "Nothing to tag!";
+  exit $?
+else
+  echo "Files found, iterating for *.spec files"
+  specs=0
+  export IFS=" "
+  for file in $files; do
+    if [[ $file =~ .*\.spec ]]; then
+      specs=$(($specs++))
+    fi
+  done
+  echo $specs
 #   result=$(create_git_tag_and_release)
 #   echo $result | jq .url
 #   exit $?
