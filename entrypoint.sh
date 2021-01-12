@@ -12,8 +12,6 @@ git fetch --prune-tags
 
 get_files
 
-echo $files
-
 if [ -z "$files" ];
 then
   echo "Nothing Found";
