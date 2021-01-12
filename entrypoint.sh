@@ -24,7 +24,7 @@ else
   export IFS=" "
   for file in $files; do
     if [[ $file =~ .*\.spec ]]; then
-      specs=$(($specs++))
+      specs=$(($specs + 1))
     fi
   done
   if [[ $specs = 0 ]]; then
