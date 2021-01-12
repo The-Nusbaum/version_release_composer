@@ -58,5 +58,5 @@ else
 #   result=$(create_git_tag_and_release)
 #   echo $result | jq .url
 #   exit $?
-# fi
+fi
 echo "------------- Script Ending ----------------------"
