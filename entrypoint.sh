@@ -27,7 +27,7 @@ else
       specs=$(($specs++))
     fi
   done
-  if [[ $specs = 0 ]] then; then
+  if [[ $specs = 0 ]]; then
     exit 1
   else
     exit 0
